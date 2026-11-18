@@ -50,6 +50,9 @@ endif()
 
 
 project(${PROJECT_NAME})
+add_compile_definitions(PICO_BOOT_STAGE2_CHOOSE_GENERIC_03H=1)
+add_compile_definitions(PICO_FLASH_SPI_CLKDIV=4)
+add_compile_definitions(STARTDELAY=200)
 
 if(${DEBUG_PRINTS} MATCHES 1)
     add_definitions( -DDEBUG_PRINTS )
